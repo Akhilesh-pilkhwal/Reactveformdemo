@@ -1,0 +1,49 @@
+
+<form [formGroup]="userForm" (submit)="saveUser()">
+  <h3>Login </h3>
+ 
+  <label for="email">Email</label>
+  <input formControlName="email" id="email" />
+  <app-control-messages [control]="userForm.controls.email"></app-control-messages>
+
+ <label for="password">Password</label>
+  <input type="password" formControlName="password" id="password" />
+  <app-control-messages [control]="userForm.controls.password"></app-control-messages>
+
+
+  <!--<label for="profile">Profile Description</label>
+  <textarea formControlName="profile" id="profile"></textarea>
+  <app-control-messages [control]="userForm.controls.profile"></app-control-messages>-->
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
+<!--<h2>Upload Files Sample</h2>  
+<div class="fileUpload btn btn-primary" >  
+<span>Upload</span>  
+<input type="file" id="btnUpload" value="Upload" (change)="fileChange($event)" class="upload" />  
+</div> 
+<img [src]="filename1"  class="img-rounded"  width="304" height="236">
+ -->
+<style>  
+#pgnumber {  
+display: none !important;  
+}  
+.fileUpload {  
+position: relative;  
+overflow: hidden;  
+margin: 10px;  
+}  
+.fileUpload input.upload {  
+position: absolute;  
+top: 0;  
+right: 0;  
+margin: 0;  
+padding: 0;  
+font-size: 20px;  
+cursor: pointer;  
+opacity: 0;  
+filter: alpha(opacity=0);  
+}  
+</style>  
+
+
