@@ -1,15 +1,11 @@
-
 html {
-     font-family: 'Pacifico';
-     
+    font-family: sans-serif;
   }
   
   form {
     padding: 10px;
     max-width: 500px;
     margin: 0 auto;
-    margin-top: 100px;
-    
   }
   
   label {

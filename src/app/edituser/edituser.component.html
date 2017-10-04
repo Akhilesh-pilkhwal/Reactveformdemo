@@ -1,28 +1,16 @@
-<form [formGroup]="editForm" (submit)="saveUser()">
-  <h3>Edit Details </h3>
-  <label for="firstName">First Name</label>
-  <input formControlName="firstName" id="firstName" />
-  <app-control-messages [control]="editForm.controls.firstName"></app-control-messages>
+<form [formGroup]="editForm" (submit)="editUser()">
+  <h3 class=text-center>Edit User </h3>
 
- <label for="lastName">Last Name</label>
-  <input formControlName="lastName" id="lastName" />
-  <app-control-messages [control]="editForm.controls.lastName"></app-control-messages>
+  <img *ngIf="profilepic" [src]="profilepic" class="img-thumbnail" width="100" height="100"> 
+  <label for="first_name">First Name</label>
+  <input formControlName="first_name" id="first_name" />
+  <app-validationmessage [control]="editForm.controls.first_name"></app-validationmessage>
 
-  <label for="email">Email</label>
-  <input formControlName="email" id="email" />
-  <app-control-messages [control]="editForm.controls.email"></app-control-messages>
+ <label for="last_name">Last Name</label>
+  <input formControlName="last_name" id="last_name" />
+  <app-validationmessage [control]="editForm.controls.last_name"></app-validationmessage>
 
- <label for="language">Language</label>
-  <input formControlName="language" id="language" />
-  <app-control-messages [control]="editForm.controls.language"></app-control-messages>
 
-   <label for="password">Password</label>
-  <input type="password" formControlName="password" id="password" />
-  <app-control-messages [control]="editForm.controls.password"></app-control-messages>
-
-  <!--<label for="profile">Profile Description</label>
-  <textarea formControlName="profile" id="profile"></textarea>
-  <app-control-messages [control]="userForm.controls.profile"></app-control-messages>-->
 
   <button type="submit" [disabled]="!editForm.valid">Edit</button>
 </form>

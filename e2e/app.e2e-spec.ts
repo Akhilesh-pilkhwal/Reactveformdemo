@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('reactveformdemo App', () => {
+describe('anular4crud App', () => {
   let page: AppPage;
 
   beforeEach(() => {

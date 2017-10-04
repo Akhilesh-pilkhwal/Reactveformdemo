@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Marck+Script');
+.web-logo{
+    font-family: 'Kaushan Script';
+    font-size: 19px;
+}
+.anchor{
+    /* font-family: 'Kaushan Script'; */
+    font-size: 24px;
+}
+body {
+    min-height: 500px;
+    background-color: #f3f3f3;
+    color: #333;
+    font: 13px/18px 'Open Sans', arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+
+.top-bar {
+    background-color: #fff;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 50px;
+    webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px 0px;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px 0px;
+}
+
+.menu-item {
+    line-height: 20px;
+    color: #3f729b;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.menu-item-flexible {
+    max-width: 230px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.web-logo {
+    color: #3f729b;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1;
+    padding-left: 0px;
+}
+
+@media (max-width: 768px) {
+    .web-logo {
+        padding-left: 15px;
+    }
+}
+
+.header-profile {
+    color: #3f729b;
+    font-weight: bold;
+    line-height: 1;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbar-nav>li>a.header-profile {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
+}
+
+.user-name-box {
+    margin-left: 5px;
+    display: none;
+}
+
+@media (min-width:768px) {
+    .navbar-nav>li>a.header-profile {
+        padding-right: 5px;
+    }
+    .web-logo {
+        padding-left: 15px;
+    }
+}
+
+#bs-navbar {
+    background-color: #fff;
+}
+
+@media (max-width:767px) {
+    .navbar-nav>li>a.header-profile {
+        max-width: none;
+        text-overflow: inherit;
+        white-space: inherit;
+        overflow: inherit;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 25px;
+    }
+    .menu-item {
+        font-size: 14px;
+    }
+    .menu-item-flexible {
+        max-width: none;
+        text-overflow: inherit;
+        overflow: inherit;
+        white-space: inherit;
+    }
+    .user-name-box {
+        font-size: 14px;
+        display: inline-block;
+    }
+    .navbar-nav>li {
+        background-color: #eee;
+    }
+    #bs-navbar {
+        background-color: #eee;
+        font-size: 15px;
+        webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px 0px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px 0px;
+        box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px 0px;
+    }
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #3f729b;
+}
+
+.navbar-toggle {
+    padding-right: 0px;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        padding-left: 0px;
+    }
+    /*.navbar-brand {}*/
+}
+
+.container>.navbar-header,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container-fluid>.navbar-collapse {
+    margin-left: 0px;
+    margin-right: 0px;
+}

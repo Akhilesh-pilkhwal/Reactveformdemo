@@ -1,0 +1,55 @@
+
+<div class="span7">   
+  <div class="widget stacked widget-table action-table">
+              
+          <div class="widget-header">
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="header row"><i class="fa fa-table" aria-hidden="true"></i>
+                  <h3 >User Listing</h3>
+              </div>  
+            </div>
+              <div class="col-md-6">
+                <input class="pull-right  textbox" [(ngModel)]="serchText" placeholder="Search text" id="lastName" />
+                </div>
+            
+            </div>
+          </div> <!-- /widget-header -->
+          
+          <div class="widget-content">
+            
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>#ID</th>
+                  <th>Image</th>
+                  <th>First Name</th>
+                  <th>lastName</th>
+                  <th class="td-actions">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of results |userfilter:serchText; let i = index">
+                  <td>{{user.id}}</td>
+                  <td><img [src]="user.avatar" class="img-thumbnail" alt="Cinque Terre" width="50" height="50"> </td>
+                  <td>{{user.first_name}}</td>
+                  <td>{{user.last_name}}</td>
+                  
+                  <td class="td-actions">
+                    <a [routerLink]="['edituser',user.id]" class="btn btn-small btn-primary">
+                      <i class="fa fa-pencil" aria-hidden="true"></i>										
+                    </a>
+                    
+                    <a href="javascript:;" class="btn btn-small">
+                    <i (click)="deleteUser(user.id,i)" class="fa fa-trash" aria-hidden="true"></i>						
+                    </a>
+                  </td>
+                </tr>
+                
+                </tbody>
+              </table>
+            
+          </div> <!-- /widget-content -->
+        
+        </div> <!-- /widget -->
+              </div>

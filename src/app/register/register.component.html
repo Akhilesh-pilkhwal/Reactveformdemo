@@ -1,0 +1,24 @@
+<form [formGroup]="registerForm" (submit)="saveUser()">
+  <h2>Register </h2>
+  <label for="firstName">First Name</label>
+  <input formControlName="firstName" id="firstName" />
+  <app-validationmessage [control]="registerForm.controls.firstName"></app-validationmessage>
+
+  <label for="lastName">Last Name</label>
+  <input formControlName="lastName" id="lastName" />
+  <app-validationmessage [control]="registerForm.controls.lastName"></app-validationmessage>
+
+  <label for="language">Language</label>
+  <input formControlName="language" id="language" />
+  <app-validationmessage [control]="registerForm.controls.language"></app-validationmessage>
+
+  <label for="email">Email</label>
+  <input formControlName="email" id="email" />
+  <app-validationmessage [control]="registerForm.controls.email"></app-validationmessage>
+
+   <label for="password">Password</label>
+  <input type="password" formControlName="password" id="password" />
+  <app-validationmessage [control]="registerForm.controls.password"></app-validationmessage>
+
+  <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+</form>
